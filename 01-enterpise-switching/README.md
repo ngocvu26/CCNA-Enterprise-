@@ -18,10 +18,13 @@ D - Kiểm thử và xác thực
 ![VLAN 10 Root](docs/VLAN%2010%20-%20Root.png)
 
 ![VLAN 20 Root](docs/VLAN%2020%20-%20Root.png)
+
 3. show ethernet summary
+   
 ![EtherChannel Summary](docs/etherchannel-summary.png)
 
-4. show ethernet load-balance
+5. show ethernet load-balance
+
 ![EtherChannel Load Balance](docs/etherchannel-load-balance.png)
 
 E. Hướng đẫn chạy thử 

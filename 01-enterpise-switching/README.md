@@ -1,6 +1,7 @@
-A - Overview
-- Tên Lab: Xây dựng mô hình mạng hai lớp: Access Layer - Distribution Layer
-- Mục tiêu: Loại bỏ lặp, làm nền tảng dự phòng tối ưu và cân bằng tải
+## A - Overview
+
+* **Tên Lab:** Xây dựng mô hình mạng hai lớp (`Access Layer` - `Distribution Layer`)
+* **Mục tiêu:** Loại bỏ vòng lặp Layer 2, tối ưu hóa cơ chế dự phòng và cân bằng tải qua liên kết gom
 
 B - Sơ đồ & Quy hoạch IP 
 - Link sơ đồ: ![Sơ đồ mạng](docs/topology.png) 

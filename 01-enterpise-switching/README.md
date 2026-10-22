@@ -5,26 +5,11 @@
 
 ---
 
-## B - Sơ đồ & Quy hoạch IP
+## B - Sơ đồ mạng
 
 * **Link sơ đồ:** 
 
 ![Sơ đồ mạng](docs/topology.png)
-
-* **Bảng quy hoạch IP:**
-
-| Thiết bị | Cổng (Interface) | Địa chỉ IP | Subnet Mask | Default Gateway | Mô tả |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **MLS-1** | Vlan 10 | 192.168.10.254 | 255.255.255.0 | N/A | SVI VLAN 10 (Root Primary) |
-| **MLS-1** | Vlan 20 | 192.168.20.253 | 255.255.255.0 | N/A | SVI VLAN 20 (Root Secondary) |
-| **MLS-2** | Vlan 10 | 192.168.10.253 | 255.255.255.0 | N/A | SVI VLAN 10 (Root Secondary) |
-| **MLS-2** | Vlan 20 | 192.168.20.254 | 255.255.255.0 | N/A | SVI VLAN 20 (Root Primary) |
-| **PC4** | NIC | 192.168.10.10 | 255.255.255.0 | 192.168.10.254 | Cụm máy trạm VLAN 10 |
-| **PC5** | NIC | 192.168.20.10 | 255.255.255.0 | 192.168.20.254 | Cụm máy trạm VLAN 20 |
-| **PC6** | NIC | 192.168.10.20 | 255.255.255.0 | 192.168.10.254 | Cụm máy trạm VLAN 10 |
-| **PC9** | NIC | 192.168.20.20 | 255.255.255.0 | 192.168.20.254 | Cụm máy trạm VLAN 20 |
-| **PC7** | NIC | 192.168.10.30 | 255.255.255.0 | 192.168.10.254 | Cụm máy trạm VLAN 10 |
-| **PC8** | NIC | 192.168.20.30 | 255.255.255.0 | 192.168.20.254 | Cụm máy trạm VLAN 20 |
 
 ---
 

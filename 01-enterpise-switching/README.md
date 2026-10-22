@@ -19,11 +19,11 @@ D - Kiểm thử và xác thực
 
 ![VLAN 20 Root](docs/VLAN%2020%20-%20Root.png)
 
-3. show ethernet summary
+2. show ethernet summary
    
 ![EtherChannel Summary](docs/etherchannel-summary.png)
 
-5. show ethernet load-balance
+3. show ethernet load-balance
 
 ![EtherChannel Load Balance](docs/etherchannel-load-balance.png)
 

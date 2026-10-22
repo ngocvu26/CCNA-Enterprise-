@@ -14,9 +14,15 @@ C - Các công nghệ & Quyết định thiết kế
 4. Uplink Strategy: Lựa chọn mô hình 2 dây(Mỗi dây 1 MLS) nhằm tối ưu tài nguyên và 4 dây đối với enterprise lớn (Stacking)
 
 D - Kiểm thử và xác thực 
-1. show spanning-tree vlan 10/20
-2. show ethernet summary
-3. show ethernet load-balance
+1. show spanning-tree vlan 10
+![VLAN 10 Root](docs/VLAN%2010%20-%20Root.png)
+
+![VLAN 20 Root](docs/VLAN%2020%20-%20Root.png)
+3. show ethernet summary
+![EtherChannel Summary](docs/etherchannel-summary.png)
+
+4. show ethernet load-balance
+![EtherChannel Load Balance](docs/etherchannel-load-balance.png)
 
 E. Hướng đẫn chạy thử 
 1. Cisco Packet Tracer 9.0 Window

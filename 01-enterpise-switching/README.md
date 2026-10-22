@@ -9,8 +9,8 @@ B - Sơ đồ & Quy hoạch IP
 C - Các công nghệ & Quyết định thiết kế 
 
 1. Spanning Tree Protocol: Triển khai Rapid-PVST+ kết hợp cân bằng tải VLAN 
-2. EtherChannel & Hash Algorithm: Gồm trunk giữa 2 MLS bằng LACP (mode active) & phân tải lưu lượng src-dest-ip đa dạng luồng
-3. Access Layer Hardening: Kích hoạt Portfast tránh thời gian chờ, BuardGuard tránh có SW lạ cắm vào 
+2. EtherChannel & Hash Algorithm: Gồm trunk giữa 2 MLS bằng LACP (mode active) & phân tải lưu lượng src-dst-ip đa dạng luồng
+3. Access Layer Hardening: Kích hoạt Portfast tránh thời gian chờ, BPDU Guard tránh có SW lạ cắm vào 
 4. Uplink Strategy: Lựa chọn mô hình 2 dây(Mỗi dây 1 MLS) nhằm tối ưu tài nguyên và 4 dây đối với enterprise lớn (Stacking)
 
 D - Kiểm thử và xác thực 
@@ -19,11 +19,11 @@ D - Kiểm thử và xác thực
 
 ![VLAN 20 Root](docs/VLAN%2020%20-%20Root.png)
 
-2. show ethernet summary
+2. show etherchannel summary 
    
 ![EtherChannel Summary](docs/etherchannel-summary.png)
 
-3. show ethernet load-balance
+3. show etherchannel load-balance
 
 ![EtherChannel Load Balance](docs/etherchannel-load-balance.png)
 

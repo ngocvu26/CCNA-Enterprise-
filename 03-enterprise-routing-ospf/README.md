@@ -43,3 +43,14 @@ Xác nhận thiết lập quan hệ láng giềng và phân định vai trò chu
   ![R3 Neighbor State](docs/ospf-png/R3-DROther.png)
 
 ---
+
+### 3.2. Bảng định tuyến RIB (Routing Information Base)
+Kiểm tra bảng định tuyến thực tế trên các thiết bị:
+* **Bảng định tuyến R1:**
+  ![R1 Routing Table](docs/routes/R1-Routes.png)
+* **Bảng định tuyến R2:**
+  ![R2 Routing Table](docs/routes/R2-Routes.png)
+* **Bảng định tuyến R3:**
+  ![R3 Routing Table](docs/routes/R3-Routes.png)
+
+---

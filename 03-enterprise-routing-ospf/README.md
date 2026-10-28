@@ -1,9 +1,5 @@
 # Enterprise Routing OSPF
 
-Repository này tài liệu hóa quá trình thiết kế, triển khai và kiểm thử hệ thống mạng doanh nghiệp tích hợp định tuyến **OSPF Multi-Area**, tối ưu hóa kiểu mạng (Network Type) và cấu hình dự phòng Floating Static Route ra ISP.
-
----
-
 ## 1. Network Topology & System Architecture
 
 Mô hình lab tích hợp 4 Router Cisco (R1, R2, R3, ISP), 1 Switch Layer 2 (SW-CORE), 1 PC (PC1) và 1 Server Internet:

@@ -26,6 +26,8 @@ Dự án tập trung triển khai và kiểm chứng các quy tắc kiểm soát
 ### B. Firewall Inbound Policy (Cisco ASA)
 - Toàn bộ cấu hình thiết bị: xem chi tiết tại [Cisco-ASA.txt](configs/Cisco-ASA.txt)
 
+### C. Edge Router Configuration & Standard ACL Rule (Cisco IOS)
+- Toàn bộ cấu hình thiết bị: xem chi tiết tại [EDGE-Router.txt](configs/EDGE-Router.txt)
 ---
 
 ## 4. Test Matrix & Verification

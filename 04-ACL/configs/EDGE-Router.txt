@@ -1,0 +1,51 @@
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname EDGE-Router
+!
+ip cef
+no ipv6 cef
+!
+license udi pid CISCO2911/K9 sn FTX15242APN-
+!
+spanning-tree mode pvst
+!
+interface GigabitEthernet0/0
+ ip address 198.51.100.1 255.255.255.0
+ ip access-group 101 out
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ ip address 203.0.113.1 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/2
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+ip route 172.16.50.0 255.255.255.0 203.0.113.2 
+ip route 192.168.10.0 255.255.255.0 203.0.113.2 
+!
+ip flow-export version 9
+!
+access-list 101 deny ip host 192.168.10.20 host 198.51.100.100
+access-list 101 permit ip any any
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!

@@ -16,11 +16,15 @@ Dự án tập trung triển khai và kiểm chứng các quy tắc kiểm soát
 
 ## 3. Configuration Breakdown
 
+### A. Layer 2 Isolation (Access Switches)
 - Phân lập lưu lượng thành 3 Broadcast Domain độc lập:
-  - `SW-INSIDE`: Toàn bộ cổng hoạt động đặt trong `VLAN 10`
-  - `SW-DMZ`: Toàn bộ cổng hoạt động đặt trong `VLAN 50`
-  - `SW-BRANCH`: Toàn bộ cổng hoạt động đặt trong `VLAN 100`
+  - `SW-INSIDE`: Toàn bộ cổng hoạt động đặt trong `VLAN 10` (xem cấu hình tại [SW-INSIDE.txt](configs/SW-INSIDE.txt))
+  - `SW-DMZ`: Toàn bộ cổng hoạt động đặt trong `VLAN 50` (xem cấu hình tại [SW-DMZ.txt](configs/SW-DMZ.txt))
+  - `SW-BRANCH`: Toàn bộ cổng hoạt động đặt trong `VLAN 100` (xem cấu hình tại [SW-BRANCH.txt](configs/SW-BRANCH.txt))
 - Đưa toàn bộ cổng không dùng vào VLAN 99
+
+### B. Firewall Inbound Policy (Cisco ASA)
+- Toàn bộ cấu hình thiết bị: xem chi tiết tại [Cisco-ASA.txt](configs/Cisco-ASA.txt)
 
 ---
 

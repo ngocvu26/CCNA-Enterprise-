@@ -1,0 +1,91 @@
+ASA Version 9.6(1)
+!
+hostname Cisco-ASA
+names
+!
+interface GigabitEthernet1/1
+ nameif DMZ
+ security-level 50
+ ip address 172.16.50.1 255.255.255.0
+!
+interface GigabitEthernet1/2
+ nameif INSIDE
+ security-level 100
+ ip address 192.168.10.1 255.255.255.0
+!
+interface GigabitEthernet1/3
+ nameif OUTSIDE
+ security-level 0
+ ip address 203.0.113.2 255.255.255.252
+!
+interface GigabitEthernet1/4
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/5
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/6
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/7
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/8
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface Management1/1
+ management-only
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+object network WEB-SERVER
+ host 172.16.50.80
+object-group service WEB-Server tcp
+ port-object eq www
+ port-object eq 443
+!
+route OUTSIDE 198.51.100.0 255.255.255.0 203.0.113.1 1
+!
+access-list DMZ-IN extended permit ip host 172.16.50.80 192.168.10.0 255.255.255.0
+access-list outside-in extended permit ip host 198.51.100.100 192.168.10.0 255.255.255.0
+access-list outside-in extended permit ip host 198.51.100.100 host 172.16.50.80
+access-list ACL_OUTSIDE_IN extended permit tcp any object WEB-SERVER
+access-list ACL_OUTSIDE_IN extended permit ip any host 172.16.50.80
+!
+access-group DMZ-IN in interface DMZ
+access-group outside-in in interface OUTSIDE
+!
+class-map inspection_default
+ match default-inspection-traffic
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum 512
+policy-map global_policy
+ class inspection_default
+  inspect dns preset_dns_map
+  inspect ftp 
+  inspect icmp 
+  inspect tftp 
+!
+service-policy global_policy global
+!
+telnet timeout 5
+ssh timeout 5

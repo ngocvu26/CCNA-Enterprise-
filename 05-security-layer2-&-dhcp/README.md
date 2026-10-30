@@ -1,3 +1,5 @@
+# Comprehensive Layer 2 Security & Enterprise DHCP Operations Lab
+
 ## 1. Overview
 Triển khai mô hình bảo mật hạ tầng truy cập mạng doanh nghiệp (Layer 2 Access Layer) kết hợp dịch vụ cấp phát địa chỉ động IP đa Subnet trên nền tảng Cisco IOS:
 * **Edge DHCP Client & Dynamic Routing:** Tiếp nhận IP từ ISP qua DHCP, tự sinh Default Route với `AD = 254`
@@ -12,9 +14,9 @@ Triển khai mô hình bảo mật hạ tầng truy cập mạng doanh nghiệp 
 ![Topology Diagram](docs/topology%20.png)
 
 Chi tiết file cấu hình thiết bị:
-* **ISP Router:** [`configs/ISP.txt`](configs/ISP.txt)[cite: 2]
-* **Edge Router (DHCP Relay Agent & DHCP Client):** [`configs/EDGE-DHCP-Relay.txt`](configs/EDGE-DHCP-Relay.txt)[cite: 2]
-* **Access Switch (Port Security & DHCP Snooping):** [`configs/SW.txt`](configs/SW.txt)[cite: 2]
+* **ISP Router:** [`configs/ISP.txt`](configs/ISP.txt)
+* **Edge Router (DHCP Relay Agent & DHCP Client):** [`configs/EDGE-DHCP-Relay.txt`](configs/EDGE-DHCP-Relay.txt)
+* **Access Switch (Port Security & DHCP Snooping):** [`configs/SW.txt`](configs/SW.txt)
 
 ---
 
@@ -42,25 +44,25 @@ Chi tiết file cấu hình thiết bị:
 
 ### A. Định tuyến & Phân bổ IP
 * **Default Route học từ DHCP (AD = 254):**
-  ![DHCP Default Route](docs/route.png)[cite: 1]
+  ![DHCP Default Route](docs/route.png)
 
 * **PC-Staff nhận đúng Subnet qua Relay Agent:**
-  ![PC-Staff DHCP Lease](docs/PC-Staff.png)[cite: 1]
+  ![PC-Staff DHCP Lease](docs/PC-Staff.png)
 
 ---
 
 ### B. DHCP Snooping Binding Database
 * **Bảng ánh xạ MAC - IP - VLAN - Interface:**
-  ![DHCP Snooping Binding Table](docs/snooping-binding.png)[cite: 1]
+  ![DHCP Snooping Binding Table](docs/snooping-binding.png)
 
 ---
 
 ### C. Port Security Enforcement & Violation Testing
 * **Trạng thái cấu hình Port Security trên Switch:**
-  ![Port Security Status](docs/port-security%20.png)[cite: 1]
+  ![Port Security Status](docs/port-security%20.png)
 
 * **Kiểm thử vi phạm mức Restrict (Cảnh báo Syslog, tăng biến đếm):**
-  ![Port Security Test Restrict](docs/port-security-test-restrict%20.png)[cite: 1]
+  ![Port Security Test Restrict](docs/port-security-test-restrict%20.png)
 
 * **Kiểm thử vi phạm mức Shutdown (Cổng rơi vào Err-disabled):**
-  ![Port Security Test Shutdown](docs/port-security-test-shutdown.png)[cite: 1]
+  ![Port Security Test Shutdown](docs/port-security-test-shutdown.png)

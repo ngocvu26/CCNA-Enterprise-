@@ -28,9 +28,8 @@ Chi tiết file cấu hình thiết bị:
 * Sub-interface VLAN người dùng tiếp nhận gói `DHCP Discover` dạng Broadcast (`255.255.255.255`)
 * Sử dụng `ip helper-address` chuyển đổi thành gói tin Unicast gửi đích danh tới DHCP Server nội bộ, đồng thời điền IP Gateway của Subnet tương ứng vào trường `giaddr` để Server cấp đúng dải IP
 
-### C. DHCP Snooping & Option 82 Fix
+### C. DHCP Snooping  
 * Bật `ip dhcp snooping` trên các VLAN hoạt động; chỉ định Trusted Port về phía Router/Server và Untrusted Ports về phía máy trạm
-* Tắt tính năng tự động chèn Option 82 (`no ip dhcp snooping information option`) trên Switch Layer 2 để tránh bị Router/Server hủy gói tin do lỗi `giaddr = 0.0.0.0`
 
 ### D. Layer 2 Port Security Hardening
 * **Server Port (Fa0/1):** Cấu hình Static MAC cố định, kích hoạt chế độ vi phạm `violation shutdown` (đưa cổng về trạng thái `err-disabled` khi cắm thiết bị lạ)

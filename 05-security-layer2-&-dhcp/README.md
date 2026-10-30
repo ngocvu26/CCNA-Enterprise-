@@ -1,5 +1,3 @@
-# Comprehensive Layer 2 Security & Enterprise DHCP Operations Lab
-
 ## 1. Overview
 Triển khai mô hình bảo mật hạ tầng truy cập mạng doanh nghiệp (Layer 2 Access Layer) kết hợp dịch vụ cấp phát địa chỉ động IP đa Subnet trên nền tảng Cisco IOS:
 * **Edge DHCP Client & Dynamic Routing:** Tiếp nhận IP từ ISP qua DHCP, tự sinh Default Route với `AD = 254`

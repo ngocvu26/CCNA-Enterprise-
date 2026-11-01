@@ -1,0 +1,107 @@
+ASA-FW#sh running-conf 
+ASA Version 9.6(1)
+!
+hostname ASA-FW
+names
+!
+interface GigabitEthernet1/1
+ nameif inside
+ security-level 100
+ ip address 10.0.3.1 255.255.255.252
+!
+interface GigabitEthernet1/2
+ nameif dmz
+ security-level 50
+ ip address 11.1.1.1 255.255.255.0
+!
+interface GigabitEthernet1/3
+ nameif outside
+ security-level 0
+ ip address 10.0.4.2 255.255.255.252
+!
+interface GigabitEthernet1/4
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/5
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/6
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/7
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/8
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface Management1/1
+ management-only
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+object network DMZ-OUTSIDE
+ host 11.1.1.10
+ nat (dmz,outside) static 203.0.113.10
+!
+access-list outside-in extended permit ip 10.10.50.0 255.255.255.0 10.10.10.0 255.255.255.0
+access-list outside-in extended permit ip 10.10.50.0 255.255.255.0 10.10.20.0 255.255.255.0
+access-list outside-in extended permit ip 10.10.50.0 255.255.255.0 10.10.30.0 255.255.255.0
+access-list outside-in extended permit ip 10.10.60.0 255.255.255.0 10.10.10.0 255.255.255.0
+access-list outside-in extended permit ip 10.10.60.0 255.255.255.0 10.10.20.0 255.255.255.0
+access-list outside-in extended permit ip 10.10.60.0 255.255.255.0 10.10.30.0 255.255.255.0
+access-list outside-in extended permit ip any host 11.1.1.10
+access-list outside-in extended permit udp 10.10.50.0 255.255.255.0 eq bootpc host 10.10.40.10
+access-list outside-in extended permit udp 10.10.60.0 255.255.255.0 eq bootpc host 10.10.40.10
+access-list dmz-in extended permit icmp host 11.1.1.10 10.10.10.0 255.255.255.0 echo-reply
+access-list dmz-in extended permit icmp host 11.1.1.10 10.10.20.0 255.255.255.0 echo-reply
+access-list dmz-in extended permit icmp host 11.1.1.10 10.10.30.0 255.255.255.0 echo-reply
+access-list dmz-in extended permit tcp host 11.1.1.10 eq www 10.10.10.0 255.255.255.0
+access-list dmz-in extended permit tcp host 11.1.1.10 eq www 10.10.20.0 255.255.255.0
+access-list dmz-in extended permit tcp host 11.1.1.10 eq www 10.10.30.0 255.255.255.0
+access-list dmz-in extended permit icmp host 11.1.1.10 any echo-reply
+access-list dmz-in extended permit tcp host 11.1.1.10 eq www any
+!
+access-group outside-in in interface outside
+access-group dmz-in in interface dmz
+!
+class-map inspection_default
+ match default-inspection-traffic
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum 512
+policy-map global_policy
+ class inspection_default
+  inspect dns preset_dns_map
+  inspect ftp 
+  inspect tftp 
+!
+service-policy global_policy global
+!
+telnet timeout 5
+ssh timeout 5
+!
+router ospf 1
+ router-id 4.4.4.4
+ log-adjacency-changes
+ network 10.0.3.0 255.255.255.252 area 0
+ network 11.1.1.0 255.255.255.0 area 0
+ network 10.0.4.0 255.255.255.252 area 0
+ network 0.0.0.0 0.0.0.0 area 0

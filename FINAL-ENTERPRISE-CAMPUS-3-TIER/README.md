@@ -1,5 +1,30 @@
 # DỰ ÁN MÔ PHỎNG HỆ THỐNG MẠNG DOANH NGHIỆP
 
+## 📑 Mục lục 
+
+- [1. Tổng quan dự án](#1-tổng-quan-dự-án)
+- [2. Sơ đồ kiến trúc mạng (Network Topology)](#2-sơ-đồ-kiến-trúc-mạng-network-topology)
+- [3. Nội dung triển khai](#3-nội-dung-triển-khai)
+  - [3.1. Cấu hình cơ bản](#31-cấu-hình-cơ-bản)
+  - [3.2. VLAN và Trunking](#32-vlan-và-trunking)
+  - [3.3. Dự phòng Layer 2 và tính sẵn sàng cao](#33-dự-phòng-layer-2-và-tính-sẵn-sàng-cao)
+  - [3.4. Định tuyến Layer 3 – OSPF](#34-định-tuyến-layer-3--ospf)
+  - [3.5. Triển khai các dịch vụ mạng](#35-triển-khai-các-dịch-vụ-mạng)
+  - [3.6. NAT và kết nối Internet](#36-nat-và-kết-nối-internet)
+  - [3.7. Firewall và Access Control List (ACL)](#37-firewall-và-access-control-list-acl)
+- [4. Kiểm tra kết nối và chính sách bảo mật](#4-kiểm-tra-kết-nối-và-chính-sách-bảo-mật)
+- [5. Cấu hình thiết bị (Configurations)](#5-cấu-hình-thiết-bị-configurations)
+- [6. Kiểm thử và xác thực (Verifications & Tests)](#6-kiểm-thử-và-xác-thực-verifications--tests)
+  - [6.1. Layer 2 Switching & STP](#61-layer-2-switching--stp)
+  - [6.2. Dự phòng Gateway (HSRP)](#62-dự-phòng-gateway-hsrp)
+  - [6.3. Định tuyến OSPF](#63-định-tuyến-ospf)
+  - [6.4. Các dịch vụ mạng & Security Baseline](#64-các-dịch-vụ-mạng--security-baseline)
+  - [6.5. Kiểm thử chính sách Access Control List (ACL)](#65-kiểm-thử-chính-sách-access-control-list-acl)
+- [7. Kết quả và kiến thức đạt được](#7-kết-quả-và-kiến-thức-đạt-được)
+- [8. Ưu điểm và hạn chế của kiến thức CCNA](#8-ưu-điểm-và-hạn-chế-của-kiến-thức-ccna)
+- [9. Công nghệ và công cụ sử dụng](#9-công-nghệ-và-công-cụ-sử-dụng)
+- [10. Hướng phát triển trong tương lai](#10-hướng-phát-triển-trong-tương-lai)
+
 ## 1. Tổng quan dự án
 
 Dự án tập trung vào việc thiết kế, cấu hình và triển khai mô hình mạng doanh nghiệp dựa trên kiến trúc mạng 3 lớp

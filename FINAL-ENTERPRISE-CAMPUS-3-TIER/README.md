@@ -19,9 +19,9 @@ Mô hình mô phỏng môi trường mạng doanh nghiệp với nhiều VLAN, h
 
 Mô hình mạng doanh nghiệp được thiết kế theo cấu trúc Campus 3 lớp (Core - Distribution - Access) kết hợp phân vùng an ninh (DMZ, Edge, Branch và ISP):
 
-![Network Topology](https://raw.githubusercontent.com/ngocvu26/CCNA-Enterprise-/main/FINAL-ENTERPRISE-CAMPUS-3-TIER/topology/topology.png)
+![Network Topology](topology/topology.png)
 
-> *Chi tiết thư mục sơ đồ:* [`topology/`](https://github.com/ngocvu26/CCNA-Enterprise-/tree/main/FINAL-ENTERPRISE-CAMPUS-3-TIER/topology)
+> *Chi tiết thư mục sơ đồ:* [topology/](topology/)
 
 ## 3. Nội dung triển khai
 

@@ -239,10 +239,9 @@ Sau khi hoàn thành dự án:
 - OSPF
 - DHCP / DNS / HTTP
 - DHCP Snooping / DAI
-- NAT / PAT
+- NAT (Static)
 - ACL
 - Firewall
-- SSH
 
 ## 10. Hướng phát triển trong tương lai
 
@@ -256,7 +255,3 @@ Sau khi hoàn thành dự án:
 ### 10.2. Định hướng học tập
 - Tìm hiểu Network Automation nhằm tự động hóa các thao tác cấu hình lặp lại, giảm thiểu sai sót và nâng cao hiệu quả quản trị hệ thống mạng
 - Tiếp tục nghiên cứu các kiến thức và công nghệ nâng cao trong chương trình CCNP
-
----
-
-**Mục đích dự án:** Xây dựng nền tảng thực hành về hệ thống mạng doanh nghiệp, từ Switching, Routing đến Network Security, Redundancy và High Availability.

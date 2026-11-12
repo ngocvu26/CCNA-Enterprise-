@@ -14,5 +14,4 @@ Tập hợp các bài lab thực hành CCNA 200-301
 - **[06-nat](./06-nat)**: Cấu hình Static NAT, Dynamic NAT và PAT
 
 ## Công cụ sử dụng
-- Cisco Packet Tracer / GNS3
-- Cisco IOS Router & Switch
+- Cisco Packet Tracer

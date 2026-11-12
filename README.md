@@ -4,14 +4,14 @@ Tập hợp toàn bộ các bài lab thực hành từ cơ bản đến nâng ca
 
 ---
 
-## 🏆 Dự án Tổng hợp (Capstone Project)
-* 👉 **[FINAL-ENTERPRISE-CAMPUS-3-TIER](./FINAL-ENTERPRISE-CAMPUS-3-TIER)** — **Thiết kế & Mô phỏng Hạ tầng Mạng Doanh nghiệp 3 Lớp (Core – Distribution – Access)**
+## Dự án Tổng hợp  
+* **[FINAL-ENTERPRISE-CAMPUS-3-TIER](./FINAL-ENTERPRISE-CAMPUS-3-TIER)** — **Thiết kế & Mô phỏng Hạ tầng Mạng Doanh nghiệp 3 Lớp (Core – Distribution – Access)**
   * **Kiến trúc & Công nghệ:** Mô hình 3-Tier Campus, VLAN & Trunking, RSTP/PVST+, EtherChannel (LACP), Dự phòng Gateway với HSRP, Định tuyến động Multi-Area OSPF, NAT/PAT, Extended ACLs và Bảo mật Layer 2.
   * **Tài liệu đi kèm:** Sơ đồ kiến trúc (Topology), file cấu hình thiết bị (`configurations/`) và kết quả kiểm thử hệ thống (`verifications/`).
 
 ---
 
-## 📂 Danh sách các Module Lab Thực hành
+##  Danh sách các Module Lab Thực hành
 
 | STT | Module / Thư mục | Nội dung kỹ thuật trọng tâm | Trạng thái |
 | :---: | :--- | :--- | :---: |

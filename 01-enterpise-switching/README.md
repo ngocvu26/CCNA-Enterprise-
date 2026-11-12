@@ -17,7 +17,7 @@
 
 1. **Spanning Tree Protocol:** Triển khai Rapid-PVST+ kết hợp cân bằng tải VLAN
 2. **EtherChannel & Hash Algorithm:** Gom trunk giữa 2 MLS bằng LACP (`mode active`) & phân tải lưu lượng `src-dst-ip` đa dạng luồng
-3. **Access Layer Hardening:** Kích hoạt `PortFast` tránh thời gian chờ, `BPDU Guard` tránh có SW lạ cắm vào
+3. **Access Layer Hardening:** Kích hoạt `PortFast` tránh thời gian chờ, `BPDU Guard`: một cổng đã áp dụng portfast thì cổng đó không được phép nhận BPDU
 4. **Uplink Strategy:** Lựa chọn mô hình 2 dây (Mỗi dây 1 MLS) nhằm tối ưu tài nguyên và 4 dây đối với enterprise lớn (Stacking)
 
 ---
